@@ -1,21 +1,21 @@
-<h6>Dashboard</h6>
+<h5 style="font-weight: bold;">Dashboard</h5>
 <h3>Welcome {{name}}</h3>
-<p>Here are your Stories</p>
+<p align="center" style="font-size: 1.3rem;font-family: 'Yellowtail', cursive;"> Here are your Stories</p>
 {{#if stories}}
     <table class="striped">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Status</th>
+                <th style="font-size: 2rem;">Title</th>
+                <th style="font-size: 2rem;">Date</th>
+                <th style="font-size: 2rem;">Status</th>
                 <th></th>
             </tr>
             <tbody>
                 {{#each stories}}
                     <tr>
-                        <td><a href="/stories/{{_id}}">{{title}}</a></td>
-                        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
-                        <td><span class="dash-status">{{status}}</span></td>
+                        <td><a href="/stories/{{_id}}" style="font-weight:bold">{{title}}</a></td>
+                        <td style="font-weight:bold">{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                        <td style="font-weight:bold" ><span class="dash-status">{{status}}</span></td>
                         <td>
                             <a href="/stories/edit/{{_id}}" class="btn btn-float">
                                 <i class="fas fa-edit"></i>
